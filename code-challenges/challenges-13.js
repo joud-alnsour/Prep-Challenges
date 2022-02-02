@@ -109,8 +109,17 @@ const stringReverse = (str) => {
 // ------------------------
 
 const statistics = (obj) => {
-    // write your code here
-}
+  let j = obj.reduce((previousValue, currentValue, currentIndex) => {
+    let a = currentValue.votes_To;
+    let value = 1;
+    if (!previousValue[a]) {
+      previousValue[a] = value;
+    } else {
+      previousValue[a]++;
+    }
+    return previousValue;
+  }, {});
+  return j;}
 
 
 
