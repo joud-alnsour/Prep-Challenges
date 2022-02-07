@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "\nfunction equalizeArray(arr) {\n\n    const storage = {};\n    for(let i of arr){\n        if (storage[i]){\n            console.log(storage[i]);\n            storage[i]++\n            console.log(storage[i]);\n        }\n        else {\n            storage[i] = 1}   \n    }\n    let occurences = Object.values(storage); \n    // console.log(occurences)\n    let max = Math.max(...occurences)\n    \n    return arr.length - max\n}\n    \n"
             ],
             "outputs": []
         },
