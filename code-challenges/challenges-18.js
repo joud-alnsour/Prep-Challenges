@@ -43,7 +43,6 @@ const wordLength = (str) => {
 // Output: false
 
 const wordLetters = (str1, str2) => {
-    let x = 0
     if (str1.length !== str2.length){
         return false
     }
