@@ -15,24 +15,25 @@
 //
 
 const recursionPattern = (int1, int2) => {
-
-	let x = []
-	x.push(int1)
-	 if (x[0]== int1){
-		for (let i=int1-int2 ; i>0 ; i-= int2){
-			 x.push(i)
-		}
-	x[x.length] = x[x.length-1] - int2
-	if (x[x.length-1] <0){
-		 
-	} 
-	for (let y = x[x.length-1] ; y <int1 ; y+=int2){
-			x.push(y+int2) }
+	let test = [];
+	if(int1 > int2){
+		let x = recursionPattern(int1 - int2,int2);
+		let y = x.flat(Infinity)
+		y.push(int1);
+		y.unshift(int1)
+		return y;
+	
+	 
+	}else{
+		j.push(-4);
+		j.push(int1);
+		j.unshift(int1);
+		return j
 	
 	}
-return x
-}
-
+	}
+	
+	recursionPattern(16,5)
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
